@@ -1,0 +1,25 @@
+{
+    "name": "dmyers/laravel-moved",
+    "description": "A simple URL rewriter package for Laravel 4.",
+    "keywords": ["laravel", "url rewriter", "url redirect", "moved"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Derek Myers",
+            "email": "arcticpro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Dmyers\\Moved": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
