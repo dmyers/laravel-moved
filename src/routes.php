@@ -1,6 +1,6 @@
 <?php
 
-$urls = Config::get('laravel-moved::urls', array());
+$urls = Config::get('moved.urls', []);
 
 foreach ($urls as $old => $new) {
 	Route::get($old, function() use ($new) {

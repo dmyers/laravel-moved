@@ -1,6 +1,6 @@
-# Moved Package for Laravel 4
+# Moved Package for Laravel 5
 
-Moved is a URL rewriter for Laravel 4 applications.
+Moved is a URL rewriter for Laravel 5 applications.
 
 ## Installation via Composer
 
@@ -15,18 +15,22 @@ After that, run composer install to install Moved.
 Add the service provider to `app/config/app.php`, within the `providers` array.
 
 ```php
-'providers' => array(
+'providers' => [
     // ...
     'Dmyers\Moved\MovedServiceProvider',
-)
+]
 ```
+
+## Laravel 4
+
+Use the `1.0` branch or the `v1.*` tags for Laravel 4 support.
 
 ## Configuration
 
 Publish the default config file to your application so you can make modifications.
 
 ```console
-$ php artisan config:publish dmyers/laravel-moved
+$ php artisan vendor:publish
 ```
 
 ## Usage

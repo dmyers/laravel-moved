@@ -18,9 +18,13 @@ class MovedServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('dmyers/laravel-moved');
+		$this->app->router->group(['namespace' => 'Dmyers\Moved'], function($router) {
+			include __DIR__.'/../../routes.php';
+		});
 		
-		include __DIR__.'/../../routes.php';
+		$this->publishes([
+			__DIR__.'/../../config/moved.php' => config_path('moved.php'),
+		]);
 	}
 
 	/**
@@ -31,16 +35,6 @@ class MovedServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
-	}
-
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array();
 	}
 
 }
