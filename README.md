@@ -10,7 +10,7 @@ Add this to you composer.json file, in the require object:
 "dmyers/laravel-moved": "dev-master"
 ```
 
-After that, run composer install to install Storage.
+After that, run composer install to install Moved.
 
 Add the service provider to `app/config/app.php`, within the `providers` array.
 
@@ -19,6 +19,14 @@ Add the service provider to `app/config/app.php`, within the `providers` array.
     // ...
     'Dmyers\Moved\MovedServiceProvider',
 )
+```
+
+## Configuration
+
+Publish the default config file to your application so you can make modifications.
+
+```console
+$ php artisan config:publish dmyers/laravel-moved
 ```
 
 ## Usage
