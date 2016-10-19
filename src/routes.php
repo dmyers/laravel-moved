@@ -3,7 +3,7 @@
 $urls = Config::get('moved.urls', []);
 
 foreach ($urls as $old => $new) {
-	Route::get($old, function() use ($new) {
+	Route::get($old, function() use ($old, $new) {
 		$url = $new;
 		$query = Request::getQueryString();
 		$question = Request::getBaseUrl().Request::getPathInfo() == '/' ? '/?' : '?';
@@ -11,6 +11,8 @@ foreach ($urls as $old => $new) {
 		if ($query) {
 			$url = $query ? $url.$question.$query : $url;
 		}
+		
+		Event::fire('moved.redirect', array($old, $new));
 		
 		return Redirect::to($url, 301);
 	});
