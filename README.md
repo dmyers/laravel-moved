@@ -12,15 +12,6 @@ Add this to you composer.json file, in the require object:
 
 After that, run composer install to install Moved.
 
-Add the service provider to `app/config/app.php`, within the `providers` array.
-
-```php
-'providers' => [
-    // ...
-    'Dmyers\Moved\MovedServiceProvider',
-]
-```
-
 ## Laravel 4
 
 Use the `1.0` branch or the `v1.*` tags for Laravel 4 support.
