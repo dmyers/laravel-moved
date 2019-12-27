@@ -2,15 +2,13 @@
 
 Moved is a URL rewriter for Laravel 5 applications.
 
-## Installation via Composer
+## Installation
 
-Add this to you composer.json file, in the require object:
+To get started, use Composer to add the package to your project's dependencies:
 
-```javascript
-"dmyers/laravel-moved": "dev-master"
+```bash
+composer require dmyers/laravel-moved
 ```
-
-After that, run composer install to install Moved.
 
 ## Laravel 4
 
