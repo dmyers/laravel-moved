@@ -22,9 +22,11 @@ class MovedServiceProvider extends ServiceProvider
             include __DIR__.'/../../routes.php';
         });
         
-        $this->publishes([
-            __DIR__.'/../../config/moved.php' => config_path('moved.php'),
-        ]);
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../../config/moved.php' => config_path('moved.php'),
+            ]);
+        }
     }
 
     /**
