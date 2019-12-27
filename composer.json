@@ -18,5 +18,12 @@
             "Dmyers\\Moved": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dmyers\\Moved\\MovedServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }
