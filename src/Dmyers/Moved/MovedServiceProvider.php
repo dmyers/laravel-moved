@@ -24,7 +24,7 @@ class MovedServiceProvider extends ServiceProvider
         
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../../config/moved.php' => config_path('moved.php'),
+                __DIR__.'/../../../config/moved.php' => config_path('moved.php'),
             ]);
         }
     }
